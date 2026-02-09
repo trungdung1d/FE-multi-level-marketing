@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0b0f1a, #020617);
+    color: #e5e7eb;
+}
+
+/* Nav bar */
+.menu {
+    height: 72px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Menu gốc */
+.menu-root {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.menu-root>li {
+    position: relative;
+}
+
+/* Link trong menu */
+.menu a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 2px;
+    transition: color 0.25s ease;
+}
+
+/* Gạch chân */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Menu con */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    min-width: 230px;
+    padding: 10px 0;
+
+    background: rgba(30, 41, 59, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.25s ease;
+    z-index: 100;
+}
+
+/* item trong submenu */
+.submenu li {
+    position: relative;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 14px;
+    color: #e5e7eb;
+    border-radius: 8px;
+}
+
+/* hover trong submenu */
+.submenu a:hover {
+    background: rgba(56, 189, 248, 0.12);
+    color: #ffffff;
+}
+
+/* submenu cấp 3 */
+.submenu .submenu {
+    top: 0;
+    left: 100%;
+    margin-left: 6px;
+}
+
+/* hover hiển thị submenu */
+.has-submenu:hover>.submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.has-submenu>a {
+    position: relative;
+}
+
+/* JS submenu */
+.has-submenu>.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.25s ease;
+}
+
+.has-submenu.open>.submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

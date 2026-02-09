@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+    <!-- File CSS định nghĩa giao diện menu -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng chính -->
+    <nav class="menu">
+
+        <!-- Danh sách menu cấp 1 -->
+        <ul class="menu-root">
+
+            <!-- Menu đơn (không có submenu) -->
+            <li><a href="/dashboard">Dashboard</a></li>
+
+            <!-- Menu có submenu: Sản phẩm -->
+            <li class="has-submenu">
+                <a href="#">Sản phẩm</a>
+
+                <!-- Submenu cấp 2 -->
+                <ul class="submenu">
+                    <li><a href="#">Danh sách sản phẩm</a></li>
+                    <li><a href="#">Thêm sản phẩm</a></li>
+
+                    <!-- Submenu cấp 3 -->
+                    <li class="has-submenu">
+                        <a href="#">Danh mục</a>
+                        <ul class="submenu">
+                            <li><a href="#">Văn phòng phẩm</a></li>
+                            <li><a href="#">Thiết bị gia dụng</a></li>
+                            <li><a href="#">Quà lưu niệm</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Kho hàng</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu bán hàng -->
+            <li class="has-submenu">
+                <a href="#">Bán hàng</a>
+                <ul class="submenu">
+                    <li><a href="#">Đơn hàng</a></li>
+                    <li><a href="#">Tạo đơn mới</a></li>
+
+                    <!-- Submenu thanh toán -->
+                    <li class="has-submenu">
+                        <a href="#">Thanh toán</a>
+                        <ul class="submenu">
+                            <li><a href="#">Tiền mặt</a></li>
+                            <li><a href="#">Chuyển khoản</a></li>
+                            <li><a href="#">Ví điện tử</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Hoàn / Huỷ đơn</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu khách hàng -->
+            <li class="has-submenu">
+                <a href="#">Khách hàng</a>
+                <ul class="submenu">
+                    <li><a href="#">Danh sách khách hàng</a></li>
+                    <li><a href="#">Nhóm khách hàng</a></li>
+                    <li><a href="#">Công nợ</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu báo cáo -->
+            <li class="has-submenu">
+                <a href="#">Báo cáo</a>
+                <ul class="submenu">
+                    <li><a href="#">Doanh thu</a></li>
+                    <li><a href="#">Lợi nhuận</a></li>
+                    <li><a href="#">Hiệu suất bán hàng</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu cài đặt -->
+            <li><a href="#">Cài đặt</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- File js xử lý tương tác menu -->
+    <script src="app.js"></script>
+</body>
+
+</html>
