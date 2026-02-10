@@ -14,88 +14,278 @@
 
 <body>
 
-    <!-- Thanh điều hướng chính -->
-    <nav class="menu">
-        <!-- Nút mở menu trên mobile -->
-        <button class="menu-toggle" aria-label="Mở menu" type="button">
-            <i class="fa-solid fa-bars"></i>
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <a href="/home" class="sidebar-logo">
+                <img src="/logo.png" alt="Logo">
+            </a>
+
+
+            <!-- Thanh điều hướng chính -->
+            <nav class="menu">
+                <!-- Nút mở menu trên mobile -->
+                <button class="menu-toggle" aria-label="Mở menu" type="button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Danh sách menu cấp 1 -->
+                <ul class="menu-root">
+
+                    <!-- Menu đơn (không có submenu) -->
+                    <li><a href="/home">Home</a></li>
+
+                    <!-- Menu giới thiệu -->
+                    <li class="has-submenu">
+                        <a href="#">Giới thiệu</a>
+                        <ul class="submenu">
+                            <li><a href="#">Chính sách hỗ trợ</a></li>
+                            <li><a href="#">Nhóm khách hàng</a></li>
+                            <li><a href="#">Phản hồi khách hàng</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu có submenu: Sản phẩm -->
+                    <li class="has-submenu">
+                        <a href="#">Sản phẩm</a>
+
+                        <!-- Submenu cấp 2 -->
+                        <ul class="submenu">
+                            <li><a href="#">Danh sách sản phẩm</a></li>
+                            <li><a href="#">Thêm sản phẩm</a></li>
+
+                            <!-- Submenu cấp 3 -->
+                            <li class="has-submenu">
+                                <a href="#">Danh mục</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Văn phòng phẩm</a></li>
+                                    <li><a href="#">Thiết bị gia dụng</a></li>
+                                    <li><a href="#">Quà lưu niệm</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Kho hàng</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu bán hàng -->
+                    <li class="has-submenu">
+                        <a href="#">Bán hàng</a>
+                        <ul class="submenu">
+                            <li><a href="#">Đơn hàng</a></li>
+                            <li><a href="#">Tạo đơn mới</a></li>
+
+                            <!-- Submenu thanh toán -->
+                            <li class="has-submenu">
+                                <a href="#">Thanh toán</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Tiền mặt</a></li>
+                                    <li><a href="#">Chuyển khoản</a></li>
+                                    <li><a href="#">Ví điện tử</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Hoàn / Huỷ đơn</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu sự kiện -->
+                    <li class="has-submenu">
+                        <a href="#">Sự kiện</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ưu đãi giảm giá</a></li>
+                            <li><a href="#">Black friday</a></li>
+                            <li><a href="#">Big deal</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu cài đặt -->
+                    <li><a href="#">Liên hệ</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="sidebar-auth">
+                <a href="#" class="btn-login">Đăng nhập</a>
+                <a href="#" class="btn-register">Đăng ký</a>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <div class="main-layout">
+
+                <!-- Left sidebar -->
+                <aside class="main-sidebar">
+                    <ul class="sidebar-menu">
+                        <li>
+                            <i class="fa-solid fa-gauge"></i>
+                            <span>Dashboard</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-store"></i>
+                            <span>Shop</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-box"></i>
+                            <span>Sản phẩm</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bell"></i>
+                            <span>Thông báo</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-wallet"></i>
+                            <span>Ví</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Hồ sơ</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-social">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://zalo.me" target="_blank" aria-label="Zalo" class="zalo-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+                        </a>
+
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </aside>
+
+
+                <!-- Main content -->
+                <div class="main-content">
+
+                    <!-- Slice banner -->
+                    <section class="slide">
+                        <div class="slide-wrapper">
+                            <div class="slide-track">
+                                <!-- Slide items sẽ được chèn động bằng JS -->
+                            </div>
+
+                            <button class="slide-btn prev">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button class="slide-btn next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <div class="slide-dots"></div>
+                        </div>
+                    </section>
+
+                    <!-- Products -->
+                    <section class="products">
+                        <div class="products-header">
+                            <h3>Sản phẩm nổi bật</h3>
+                            <a href="#" class="products-link">Xem tất cả</a>
+                        </div>
+
+                        <div class="products-grid">
+                            <!-- Product item render bằng JS -->
+                        </div>
+                    </section>
+
+                    <!-- Categories -->
+                    <section id="categories" class="categories">
+                        <div class="categories-header">
+                            <h3>Danh mục sản phẩm</h3>
+                        </div>
+
+                        <div class="categories-grid">
+
+                            <a href="#" class="category-card">
+                                <div class="category-img-wrapper">
+                                    <img src="/assets/img/van-phong-pham.jpg" alt="Văn phòng phẩm">
+                                    <div class="category-title">
+                                        Văn phòng phẩm
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="category-card">
+                                <div class="category-img-wrapper">
+                                    <img src="/assets/img/gia-dung.jpg" alt="Thiết bị gia dụng">
+                                    <div class="category-title">
+                                        Thiết bị gia dụng
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="category-card">
+                                <div class="category-img-wrapper">
+                                    <img src="/assets/img/qua-tang.jpg" alt="Quà lưu niệm">
+                                    <div class="category-title">
+                                        Quà lưu niệm
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="category-card">
+                                <div class="category-img-wrapper">
+                                    <img src="/assets/img/my-pham.jpg" alt="Hóa mỹ phẩm">
+                                    <div class="category-title">
+                                        Hóa mỹ phẩm
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </section>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- chat -->
+    <div class="chatbot-container" id="chatbot">
+
+        <!-- Toggle button -->
+        <button class="chatbot-toggle-button" id="chatToggle">
+            <i class="fa-solid fa-comments"></i>
         </button>
 
-        <!-- Danh sách menu cấp 1 -->
-        <ul class="menu-root">
+        <!-- Chat window -->
+        <div class="chatbot-window" id="chatWindow">
+            <div class="chatbot-header">
+                <span>Hỗ trợ trực tuyến</span>
 
-            <!-- Menu đơn (không có submenu) -->
-            <li><a href="/dashboard">Dashboard</a></li>
+                <button class="chatbot-close" id="chatClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
-            <!-- Menu có submenu: Sản phẩm -->
-            <li class="has-submenu">
-                <a href="#">Sản phẩm</a>
+            <div class="chatbot-messages">
 
-                <!-- Submenu cấp 2 -->
-                <ul class="submenu">
-                    <li><a href="#">Danh sách sản phẩm</a></li>
-                    <li><a href="#">Thêm sản phẩm</a></li>
+                <!-- Bot message -->
+                <div class="message bot">
+                    <div class="message-bubble">
+                        <p>Xin chào! Tôi có thể hỗ trợ gì cho bạn?</p>
+                    </div>
+                </div>
 
-                    <!-- Submenu cấp 3 -->
-                    <li class="has-submenu">
-                        <a href="#">Danh mục</a>
-                        <ul class="submenu">
-                            <li><a href="#">Văn phòng phẩm</a></li>
-                            <li><a href="#">Thiết bị gia dụng</a></li>
-                            <li><a href="#">Quà lưu niệm</a></li>
-                        </ul>
-                    </li>
+            </div>
 
-                    <li><a href="#">Kho hàng</a></li>
-                </ul>
-            </li>
+            <div class="chatbot-input">
+                <input type="text" placeholder="Nhập câu hỏi của bạn..." />
+                <button>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
 
-            <!-- Menu bán hàng -->
-            <li class="has-submenu">
-                <a href="#">Bán hàng</a>
-                <ul class="submenu">
-                    <li><a href="#">Đơn hàng</a></li>
-                    <li><a href="#">Tạo đơn mới</a></li>
+    </div>
 
-                    <!-- Submenu thanh toán -->
-                    <li class="has-submenu">
-                        <a href="#">Thanh toán</a>
-                        <ul class="submenu">
-                            <li><a href="#">Tiền mặt</a></li>
-                            <li><a href="#">Chuyển khoản</a></li>
-                            <li><a href="#">Ví điện tử</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">Hoàn / Huỷ đơn</a></li>
-                </ul>
-            </li>
-
-            <!-- Menu khách hàng -->
-            <li class="has-submenu">
-                <a href="#">Khách hàng</a>
-                <ul class="submenu">
-                    <li><a href="#">Danh sách khách hàng</a></li>
-                    <li><a href="#">Nhóm khách hàng</a></li>
-                    <li><a href="#">Công nợ</a></li>
-                </ul>
-            </li>
-
-            <!-- Menu báo cáo -->
-            <li class="has-submenu">
-                <a href="#">Báo cáo</a>
-                <ul class="submenu">
-                    <li><a href="#">Doanh thu</a></li>
-                    <li><a href="#">Lợi nhuận</a></li>
-                    <li><a href="#">Hiệu suất bán hàng</a></li>
-                </ul>
-            </li>
-
-            <!-- Menu cài đặt -->
-            <li><a href="#">Cài đặt</a></li>
-
-        </ul>
-    </nav>
 
     <!-- File js xử lý tương tác menu -->
     <script src="app.js"></script>

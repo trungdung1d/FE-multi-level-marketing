@@ -1,0 +1,102 @@
+{
+    "slides": [
+        {
+            "id": 1,
+            "title": "Introduction",
+            "subtitle": "Giới thiệu hệ thống bán hàng đa cấp",
+            "description": "Hệ thống bán hàng đa cấp giúp bạn quản lý mạng lưới phân phối và tăng doanh số hiệu quả.",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1770705827/galleries-1-1200x800_hws6gy.png"
+        },
+        {
+            "id": 2,
+            "title": "Promotion",
+            "subtitle": "Ưu đãi hôm nay",
+            "description": "Khám phá các chương trình khuyến mãi hấp dẫn dành riêng cho bạn.",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1770705829/Promotional-banner_iqzszv.png"
+        },
+        {
+            "id": 3,
+            "title": "Black Friday Sale",
+            "subtitle": "Bán hàng siêu giảm giá",
+            "description": "Đừng bỏ lỡ cơ hội mua sắm giá ưu đãi.",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1770705827/black-friday-super-sale-facebook-cover-banner-template_120329-5177_aghmqn.avif"
+        }
+    ],
+    "products": [
+        {
+            "id": 101,
+            "name": "Túi đựng tài liệu tệp đựng tài liệu nhiều ngăn kẹp file túi đựng tài liệu A4 phụ kiện văn phòng phẩm",
+            "desc": "M.Y.never cam kết và đảm bảo: Sản xuất văn phòng phẩm học sinh chất lượng cao tại Việt Nam; 100% sản phẩm có sẵn, giao hàng ngay sau khi nhận đơn hàng; Bồi thường 100% sản phẩm lỗi từ nhà sản xuất, có video mở",
+            "price": 1200000,
+            "sale_price": 950000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1769587677/educommerce/lhk7gfh8ghkoav7ltwod.jpg",
+            "tag": "Hot"
+        },
+        {
+            "id": 102,
+            "name": "Cuộn 500 miếng dán hoạt hình ngộ nghĩnh",
+            "desc": "Sticker khen thưởng (500 sticker/1 cuộn) tạo hứng thú cho bé học tiếng Anh hàng loại dày, in sắc nét",
+            "price": 890000,
+            "sale_price": 950000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1767345703/educommerce/osjszbs03axcjlbub3o5.png",
+            "tag": "New"
+        },
+        {
+            "id": 103,
+            "name": "Sổ tay loại rời siêu dễ thương, giấy dày 120 trang, trang bên trong có thể tháo rời, bìa chống nước",
+            "desc": "M.Y.never cam kết và đảm bảo: Sản xuất văn phòng phẩm học sinh chất lượng cao tại Việt Nam; 100% sản phẩm có sẵn, giao hàng ngay sau khi nhận đơn hàng; Bồi thường 100% sản phẩm lỗi từ nhà sản xuất, có video mở",
+            "price": 2300000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1767345141/educommerce/isynbsxpwfdqlpbriwy7.png",
+            "tag": "Hot"
+        },
+        {
+            "id": 104,
+            "name": "Combo Bút dạ quang Thiên Long,Màu dạ quang mạnh, không làm lem nét chữ của mực khi viết chồng lên",
+            "desc": "Bút dạ quang còn được gọi là Bút đánh dấu.Bút dạ quang  là sản phẩm mới thuộc dòng sản phẩm Officemate series do Tập đoàn Thiên Long sản xuất, mang nhãn hiệu Flexoffice. ",
+            "price": 38000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1764047691/educommerce/jxosufpqlym2cjndcbuy.jpg",
+            "tag": "Hot"
+        },
+        {
+            "id": 105,
+            "name": "Vỉ 12 cây bút bi, viết bi bấm ngòi 0.7mm TODOSUYO được thiết kế sắc sảo in laser hiện đại",
+            "desc": "Bút bi TODOSUYO ngòi 0.7mm mang đến trải nghiệm viết mượt mà và nét chữ rõ ràng, mực được nhập khẩu từ Đức và sử dụng công nghệ Thụy Sĩ, cho bạn cảm giác viết êm ái và mực đều màu. Thân bút in laser sáng bóng, không bị bong tróc, cùng cơ chế bấm tiện lợi giúp bảo vệ ngòi bút và dễ dàng sử dụng.",
+            "price": 120000,
+            "sale_price": 72000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1762834108/educommerce/xglxkn6fp1nklwazxpww.jpg",
+            "tag": "Hot"
+        },
+        {
+            "id": 106,
+            "name": "Sách - Cơ Sở Đại Số Tuyến Tính (Dùng Cho Sinh Viên Các Trường Đại Học Và Cao Đẳng Kỹ Thuật)",
+            "desc": "Bài giảng về Đại số tuyến tính thường được thực hiện vào học kỳ đầu tiên ở hầu hết các trường đại học về khoa học kỹ thuật và đào tạo kỹ sư. Vào thời điểm này, sinh viên bắt đầu làm quen với đối tượng kiến thức mới cũng như phương pháp tư duy mới. Đã có những cách xây dựng khác nhau cho chương trình môn học",
+            "price": 60000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1764153704/educommerce/tfjlixai5roxosyld9pt.jpg",
+            "tag": "Hot"
+        },
+        {
+            "id": 107,
+            "name": "Đèn Ngủ Để Bàn BOUTIQUE Đèn Để Bàn Đa Năng Tích Hợp Ổ Cắm USB Kế Để Điện Thoại Nút Nguồn",
+            "desc": "TÍNH NĂNG PHẨM ĐÈN NGỦ ĐỂ BÀN Ổ CẮM ĐIỆN ĐA NĂNG: Tiện ích đa năng: Đèn ngủ để bàn cung cấp không chỉ ánh sáng mà còn các ổ cắm điện và cổng sạc USB, giúp tiết kiệm không gian và cung cấp năng lượng cho nhiều thiết bị khác nhau; Tiết kiệm không gian: Thay vì phải sử dụng nhiều thiết bị riêng lẻ như đèn ngủ, ổ cắm điện và cục sạc USB,  đèn ngủ để bàn này kết hợp tất cả trong một, giúp tiết kiệm không gian trên bàn đầu giường hoặc bàn làm việc.",
+            "price": 850000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1770719030/vn-11134207-7r98o-lve2cl02k9zh60_resize_w450_nl_ukdqh6.jpg",
+            "tag": "Hot"
+        },
+        {
+            "id": 108,
+            "name": "Khăn quàng cổ,khăn choàng mùa đông dạ kẻ phong cách Vintage",
+            "desc": "Khăn quàng cổ nữ và nam được làm chất liệu vải len dạ mềm mịn.",
+            "price": 72000,
+            "currency": "VNĐ",
+            "image": "https://res.cloudinary.com/dzmlqhdpg/image/upload/v1770719031/vn-11134207-7ras8-m16jguccdw8qe6_r6dqmu.jpg",
+            "tag": "Hot"
+        }
+    ]
+}

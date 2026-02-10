@@ -11,16 +11,65 @@ body {
     color: #e5e7eb;
 }
 
-/* Nav bar */
-.menu {
+.app-layout {
+    display: flex;
+    padding-top: 72px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 72px;
-    padding: 0 48px;
+    padding: 0 24px;
     display: flex;
     align-items: center;
-
-    background: rgba(15, 23, 42, 0.75);
+    justify-content: center;
+    gap: 24px;
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+.sidebar-logo {
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sidebar-auth {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.sidebar-auth a {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-login {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-register {
+    background: #2563eb;
+}
+
+/* Nav bar */
+.menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Menu gốc */
@@ -141,6 +190,684 @@ body {
     display: none;
 }
 
+/* main layout */
+.main-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Sidebar  trong main layout */
+.main-sidebar {
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    width: 200px;
+    overflow-y: auto;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 16px;
+    flex-shrink: 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.sidebar-menu li i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.sidebar-menu li span {
+    white-space: nowrap;
+}
+
+/* sidebar hover */
+.sidebar-menu li:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-menu li:hover i {
+    color: #60a5fa;
+}
+
+/* sidebar active */
+.sidebar-menu li.active {
+    background: rgba(96, 165, 250, 0.12);
+}
+
+.sidebar-menu li.active i,
+.sidebar-menu li.active span {
+    color: #60a5fa;
+}
+
+/* sidebar social */
+.sidebar-social {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.sidebar-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+/* facebook */
+.sidebar-social a[href*="facebook"] {
+    color: #1877F2;
+}
+
+.sidebar-social a[href*="facebook"]:hover {
+    background: #1877F2;
+    color: #fff;
+}
+
+/* youtube */
+.sidebar-social a[href*="youtube"] {
+    color: #FF0000;
+}
+
+.sidebar-social a[href*="youtube"]:hover {
+    background: #FF0000;
+    color: #fff;
+}
+
+/* zalo */
+.sidebar-social .zalo-icon {
+    background: #f3f3f3;
+}
+
+.sidebar-social .zalo-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-social .zalo-icon:hover {
+    background: #0068FF;
+}
+
+/* Content bên phải */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.slide {
+    padding: 12px;
+}
+
+.slide-wrapper {
+    position: relative;
+    background: #1f2937;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 420px;
+}
+
+.slide-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.slide-item {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    opacity: 1
+}
+
+.slide-tag {
+    align-self: flex-start;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 999px;
+}
+
+
+.slide-text {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    max-width: 520px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+}
+
+.slide-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    background: linear-gradient(90deg, #ffffff, #c7d2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slide-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(226, 232, 240, 0.85);
+}
+
+
+/* Buttons */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slide-btn.prev {
+    left: 12px;
+}
+
+.slide-btn.next {
+    right: 12px;
+}
+
+/* Dots */
+.slide-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+/* Products */
+.products,
+.categories {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 20px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.products-header,
+.categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.products-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.products-link {
+    font-size: 13px;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.products-link:hover {
+    text-decoration: underline;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.product-card {
+    position: relative;
+    background: rgba(30, 41, 59, 0.75);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Ảnh sản phẩm */
+.product-image {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-content {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+}
+
+/* Tên sản phẩm */
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f8fafc;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mô tả sản phẩm */
+.product-desc {
+    font-size: 12px;
+    color: #94a3b8;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-price-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Giá gốc */
+.price-old {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Giá sale */
+.price-sale {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e53935;
+}
+
+/* Không sale */
+.price-normal {
+    font-size: 14px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+/* Badge sản phẩm */
+.product-badge {
+    position: absolute;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    background: #38bdf8;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%,
+            60% 15%,
+            78% 10%,
+            85% 28%,
+            100% 35%,
+            85% 50%,
+            100% 65%,
+            85% 72%,
+            78% 90%,
+            60% 85%,
+            50% 100%,
+            40% 85%,
+            22% 90%,
+            15% 72%,
+            0% 65%,
+            15% 50%,
+            0% 35%,
+            15% 28%,
+            22% 10%,
+            40% 15%);
+    box-shadow: 0 6px 14px rgba(229, 57, 53, 0.4);
+}
+
+/* Categories */
+.categories-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.category-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.category-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.category-card:hover .category-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.category-img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.15),
+            transparent);
+}
+
+.category-title {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
+
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Chat */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* ===== Toggle button ===== */
+.chatbot-toggle-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.chatbot-toggle-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 14px 36px rgba(56, 189, 248, 0.6);
+}
+
+.chatbot-toggle-button i {
+    font-size: 22px;
+}
+
+.chatbot-container.open .chatbot-toggle-button {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+/* ===== Chat window ===== */
+.chatbot-window {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 360px;
+    height: 480px;
+
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(18px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    animation: fadeInSlideUp 0.25s ease-out forwards;
+}
+
+.chatbot-window, .chatbot-close {
+    display: none;
+}
+
+
+.chatbot-container.open .chatbot-window {
+    display: flex;
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== chat header ===== */
+.chatbot-header {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: #fff;
+    padding: 14px 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+}
+
+/* ===== chat messages ===== */
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background: rgba(2, 6, 23, 0.65);
+    scrollbar-width: thin;
+    scrollbar-color: #38bdf8 transparent;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 4px;
+}
+
+.message {
+    display: flex;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-bubble {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* message bot */
+.message.bot .message-bubble {
+    background: rgba(30, 41, 59, 0.9);
+    color: #e5e7eb;
+    border-bottom-left-radius: 6px;
+}
+
+/* Vùng input */
+.message.bot.typing .message-bubble {
+    background: rgba(148, 163, 184, 0.25);
+    color: #cbd5f5;
+    font-style: italic;
+}
+
+.chatbot-input {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(2, 6, 23, 0.7);
+    color: #e5e7eb;
+    font-size: 14px;
+    outline: none;
+}
+
+.chatbot-input input::placeholder {
+    color: #94a3b8;
+}
+
+.chatbot-input input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* Send button */
+.chatbot-input button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.chatbot-input button:hover {
+    transform: scale(1.08);
+}
+
+.chatbot-input button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
 /* Mobile */
 @media (max-width: 768px) {
 
@@ -232,6 +959,7 @@ body {
         opacity: 1;
         visibility: visible;
         transform: none;
+        z-index: 100;
     }
 
     /* Mở submenu bằng JS */
@@ -242,7 +970,7 @@ body {
         transform: none;
     }
 
-    .menu-root.open .has-submenu.open > .submenu {
+    .menu-root.open .has-submenu.open>.submenu {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -270,5 +998,139 @@ body {
     /* tắt underline */
     .menu a::after {
         display: none;
+    }
+
+    /* slide */
+    .slide-wrapper {
+        height: 260px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .slide-text {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+        padding: 18px;
+    }
+
+    .slide-text h2 {
+        font-size: 22px;
+    }
+
+    .slide-text p {
+        font-size: 13px;
+    }
+
+    .main-sidebar {
+        display: none;
+    }
+
+    /* ===== Main layout ===== */
+    .main-layout {
+        padding: 12px;
+    }
+
+    /* ===== slide ===== */
+    .slide {
+        padding: 0;
+    }
+
+    .slide-wrapper {
+        height: 220px;
+        border-radius: 14px;
+    }
+
+    /* ===== products ===== */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 120px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-desc {
+        font-size: 11px;
+    }
+
+    /* ===== categories ===== */
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .category-img-wrapper {
+        height: 160px;
+    }
+
+    .category-title {
+        font-size: 1rem;
+    }
+
+    /* chat */
+    chatbot-container {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        inset: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        border-radius: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .chatbot-header {
+        position: relative;
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .chatbot-close {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: #fff;
+
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .chatbot-close:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .chatbot-input {
+        padding: 10px;
+    }
+
+    .chatbot-toggle-button {
+        width: 46px;
+        height: 46px;
     }
 }
